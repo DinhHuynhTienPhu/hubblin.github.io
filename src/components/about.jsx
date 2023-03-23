@@ -1,6 +1,7 @@
 import React, { memo } from "react";
 import "../styles/about.scss";
-import img from "../images/myficture.jpg";
+import img from "../images/avt.jpg";
+import p2 from "../images/p2.jpg";
 
 import {
   IoPerson,
@@ -9,47 +10,56 @@ import {
   IoCalendarClearOutline,
 } from "react-icons/io5";
 
+import ImageCarousel from "./ImageCarousel";
+const images = [
+  img,p2
+  
+];
 const About = memo(({ refs }) => {
   return (
     <section ref={refs} className="about-section">
       <div className="section-title">ABOUT ME</div>
 
       <div className="about-content">
-        <img
-          className="about-picture"
-          src={img}
-          alt="이미지 불러오기를 실패했습니다."
-        ></img>
+        <div style={{
+        }}>
+                <ImageCarousel images={images} />
+
+        </div>
         <div className="about-info">
-          <b className="info-title">"디테일은 퀄리티다"</b>
-          <div className="info">
+          <b className="info-title">"Every challenge is an opportunity"</b>
+          <div className="info" style={{textOverflow:"unset !important", whiteSpace:"break-spaces !important"}}>
             <br />
-            안녕하세요. 끊임없는 성장을 추구하는 열정이 있는 개발자 임호균
-            입니다. 새로운 기능을 배우고 재미있는 아이디어로 여러 개발을 하는
-            것을 좋아합니다. 컴퓨터 공학부에 재학 중이며 프론트엔드 개발자를
-            지망하고 있습니다. '디테일은 퀄리티다' 라는 말처럼 꼼꼼하게 확인하고
-            놓친 부분은 없는지 다시 한 번 확인하며 퀄리티 높은 작품을 만들고
-            수정과 개선에 두려움없이 도전하는 개발자가 되겠습니다.
+            <b style={{fontSize:'200%'}}>A</b>s an experienced game developer, I believe that every challenge is an
+            <br/>
+            opportunity to
+            learn and improve. 
+            <br />
+            <b style={{ fontSize: '200%' }}>I</b>'m always eager to try new things in different fields and take on new <br/> challenges.
+
+            <br />
+            <b style={{ fontSize: '200%' }}>I</b>'m a responsible developer who is always take my task seriously and <br/>always
+            try to do my best. 
           </div>
           <ul>
             <li>
               <div className="info-li">
-                <IoPerson className="icon" /> 임호균
+                <IoPerson className="icon" style={{position:'relative',top:'2px'}} />  Dinh Huynh Tien Phu
               </div>
             </li>
             <li>
               <div className="info-li">
-                <IoLocationSharp className="icon" /> 부산광역시 중구
+                <IoLocationSharp className="icon" style={{ position: 'relative', top: '3px' }} />  56 Rach Long Den Street, 8 District, HCM City
               </div>
             </li>
             <li>
               <div className="info-li">
-                <IoMailSharp className="icon" /> lhkworld16@gmail.com
+                <IoMailSharp className="icon" style={{ position: 'relative', top: '3px' }} />  ff10111011@gmail.com
               </div>
             </li>
             <li>
               <div className="info-li">
-                <IoCalendarClearOutline className="icon" /> 1997.03.10
+                <IoCalendarClearOutline className="icon" style={{ position: 'relative', top: '3px' }} />  2001
               </div>
             </li>
           </ul>

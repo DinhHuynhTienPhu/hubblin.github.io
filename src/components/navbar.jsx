@@ -1,6 +1,7 @@
 import React, { useCallback, useState, memo } from "react";
 import "../styles/navbar.scss";
 
+
 import { MdMenu } from "react-icons/md";
 
 const Navbar = memo(({ handleScroll }) => {
@@ -14,7 +15,16 @@ const Navbar = memo(({ handleScroll }) => {
     <>
       <header>
         <nav className="navbar">
-          <div className="navbar__logo">MMFIN.</div>
+          <div className="navbar__logo">Phu's Portfolio </div>
+          <a style={{
+            color: "gray",
+            fontSize: "15px",
+            position: "relative",
+            left: "6.5%",
+          }} target="_blank"
+            href="https://drive.google.com/file/d/1-wTDTyXrhGw2qIIkHMPOTkdBp1eknANd/view?usp=sharing">
+            Resume
+          </a>
 
           <ul className="navbar__menu">
             <li>

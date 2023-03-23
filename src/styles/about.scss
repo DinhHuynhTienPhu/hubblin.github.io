@@ -33,6 +33,7 @@
         color: rgb(104, 104, 104);
         font-weight: 600;
         text-shadow: none;
+        text-align: left !important;
       }
 
       ul {
@@ -54,8 +55,8 @@
     }
   }
 }
-@media screen and(max-width : 768px) {
-  .about-section {
+@media screen and (max-width: 768px) {
+    .about-section {
     .about-content {
       flex-wrap: wrap;
       .about-picture {
